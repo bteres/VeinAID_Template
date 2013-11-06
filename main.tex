@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[top = 1in, bottom = 1.2in, left = 1in, right = 1in, paperwidth=8.3in, paperheight=11.7in]{geometry}
+\addtolength{\footskip}{0.5cm}
+\usepackage{graphicx, array}
+\graphicspath{{./images/}}
+\usepackage{fancyhdr}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{underscore}
+\usepackage{listings}
+\includepdfset{pagecommand=\thispagestyle{plain}}
+\usepackage{longtable,hyperref}
+\newcommand{\longtableendfoot}{Please continue at the next page}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfauthor={Brett Terespolsky},     % author
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,         % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black           % color of external links
+}
+\makeatletter
+\def\input@path{{./primitives/}}
+\makeatother
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=TikzFigures/] 
+
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+
+\pagestyle{fancy}
+\headheight 35pt
+
+% \rhead{\includegraphics{images/letterhead_right.jpg}}
+% \lhead{\includegraphics{images/letterhead_left.jpg}}
+\lhead{}
+\chead{PRIVATE \& CONFIDENTIAL - MEDICAL ASSISTIVE TECHNOLOGIES}
+\rhead{}
+\rfoot{\includegraphics[height=1cm, keepaspectratio=true]{images/letterhead_right.jpg}}
+\cfoot{\thepage}
+\lfoot{\includegraphics[height=1cm, keepaspectratio=true]{images/letterhead_left.jpg}}
+
+\newcommand{\veinaid}{VeinAID\textsuperscript{TM}}
+
+\def\myversion{1.0 }
+\title{%
+\flushright
+\rule{16cm}{5pt}
+\Huge{SPECIFICATION SHEET}\\
+\vspace{1cm}
+for the Complete \veinaid~ System\\
+\vspace{2cm}
+\LARGE{Release 1.0\\}
+\vspace{2cm}
+\LARGE{Version \myversion approved\\}
+\includegraphics[scale=0.2, keepaspectratio=true]{images/MAT.jpg}
+\vfill
+Prepared by Brett R. Terespolsky\\
+% \vspace{1cm}
+% 11 July 2013\\
+% \vspace{1cm}
+% Version \myversion\\
+\rule{16cm}{5pt}
+\date{}
+}
+
+\begin{document}
+\clearpage\maketitle
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\pagenumbering{roman}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\tableofcontents
+
+% \newpage
+% \section*{VERSION CONTROL}
+% \input{versions}
+
+% \newpage
+% \section*{ABBREVIATIONS AND ACCRONYMS}
+
+\newpage\setcounter{page}{1}
+\pagenumbering{arabic}
+\section{INTRODUCTION}
+\input{fig1.tikz}
+\end{document}
