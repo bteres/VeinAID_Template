@@ -51,20 +51,20 @@
 
 \newcommand{\veinaid}{VeinAID\textsuperscript{TM}}
 
-\def\myversion{1.0 }
+\def\myversion{1.0}
 \title{%
 \flushright
 \rule{16cm}{5pt}
-\Huge{SPECIFICATION SHEET}\\
+\Huge{TITLE}\\
 \vspace{1cm}
-for the Complete \veinaid~ System\\
+Subtitle\\
 \vspace{2cm}
-\LARGE{Release 1.0\\}
+% \LARGE{Release 1.0\\}
 \vspace{2cm}
-\LARGE{Version \myversion approved\\}
+% \LARGE{Version \myversion approved\\}
 \includegraphics[scale=0.2, keepaspectratio=true]{images/MAT.jpg}
 \vfill
-Prepared by Brett R. Terespolsky\\
+Prepared by Author\\
 % \vspace{1cm}
 % 11 July 2013\\
 % \vspace{1cm}
@@ -74,24 +74,28 @@ Prepared by Brett R. Terespolsky\\
 }
 
 \begin{document}
+\addtocontents{toc}{\vspace{1em}}
 \clearpage\maketitle
 \thispagestyle{empty}
 \newpage
 \setcounter{page}{1}
 \pagenumbering{roman}
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{0}
 \setcounter{tocdepth}{5}
 \tableofcontents
 
-% \newpage
-% \section*{VERSION CONTROL}
-% \input{versions}
+\newpage
+\section{Revision History}
+\input{versions}
 
-% \newpage
-% \section*{ABBREVIATIONS AND ACCRONYMS}
+\newpage
+\section{Abbreviations and Acronyms}
+
+\addtocontents{toc}{\vspace{2em}}
+\setcounter{secnumdepth}{5}
 
 \newpage\setcounter{page}{1}
 \pagenumbering{arabic}
-\section{INTRODUCTION}
-\input{fig1.tikz}
+\section{Introduction}
+% \input{fig1.tikz}
 \end{document}

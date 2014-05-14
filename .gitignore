@@ -36,3 +36,5 @@
 /TikzFigures/*.dpth
 /TikzFigures/*.log
 *.pdf
+*.sublime-project
+*.sublime-workspace

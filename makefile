@@ -4,7 +4,7 @@ TEX = latexmk
 
 # List all the files that are used when producing the pdf
 MAIN_FILE = main.tex
-OUTFILE = VeinAID_MobileTechnology
+OUTFILE = VeinAID_ChangeTitleInMakefile
 
 FLAGS = -f -cd -pdflatex=lualatex -pdf -quiet -synctex=1 -outdir=Output -shell-escape
 .PHONY : all clean help cont superclean view
@@ -12,6 +12,7 @@ FLAGS = -f -cd -pdflatex=lualatex -pdf -quiet -synctex=1 -outdir=Output -shell-e
 # default: help
 
 all: $(FILES)
+	./latex-git-log --author --width=10 > versions.tex
 	$(TEX) $(FLAGS) $(MAIN_FILE)
 	mv ./Output/*.pdf ./$(OUTFILE).pdf
 
@@ -19,7 +20,7 @@ clean:
 	@rm -rf ./Output
 
 superclean:
-	@rm -rf ./Output ./TikzFigures/* ./$(OUTFILE).pdf
+	@rm -rf ./Output ./TikzFigures/* ./$(OUTFILE).pdf ./versions.tex
 
 cont:
 	$(TEX) $(FLAGS) -pvc $(MAIN_FILE)

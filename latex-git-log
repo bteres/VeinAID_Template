@@ -104,7 +104,7 @@ else {
 say '\hline \multicolumn{1}{|c}{\textbf{' . loc('V') . '}}';
 say '& \multicolumn{1}{c}{\textbf{' . loc('Author') . '}}' if $print_author;
 say '& \multicolumn{1}{c}{\textbf{' . loc('Date') . '}}
-& \multicolumn{1}{c|}{\textbf{' . loc('Commit message') . '}} \\\\ \hline
+& \multicolumn{1}{c|}{\textbf{' . loc('Comment') . '}} \\\\ \hline
 \endhead
 ';
 if ($print_author) {
