@@ -6,7 +6,7 @@ TEX = latexmk
 MAIN_FILE = main.tex
 OUTFILE = VeinAID_ChangeTitleInMakefile
 
-FLAGS = -f -cd -pdflatex=lualatex -pdf -quiet -synctex=1 -outdir=Output -shell-escape
+FLAGS = -f -cd -pdf -quiet -synctex=1 -outdir=Output -shell-escape
 .PHONY : all clean help cont superclean view
 
 # default: help
@@ -20,7 +20,7 @@ clean:
 	@rm -rf ./Output
 
 superclean:
-	@rm -rf ./Output ./TikzFigures/* ./$(OUTFILE).pdf ./versions.tex
+	@rm -rf ./Output/*.* ./TikzFigures/* ./$(OUTFILE).pdf ./versions.tex
 
 cont:
 	$(TEX) $(FLAGS) -pvc $(MAIN_FILE)

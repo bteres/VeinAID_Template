@@ -12,25 +12,27 @@
 \usepackage{longtable,hyperref}
 \newcommand{\longtableendfoot}{Please continue at the next page}
 \hypersetup{
-    bookmarks=true,         % show bookmarks bar?
-    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=false,     % window fit to page when opened
-    pdfstartview={FitH},    % fits the width of the page to the window
-    pdfauthor={Brett Terespolsky},     % author
-    pdfnewwindow=true,      % links in new window
-    colorlinks=true,        % false: boxed links; true: colored links
-    linkcolor=black,         % color of internal links
-    citecolor=black,        % color of links to bibliography
-    filecolor=black,      % color of file links
-    urlcolor=black           % color of external links
+  % bookmarks=true,         % show bookmarks bar?
+  unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+  pdftoolbar=true,        % show Acrobat’s toolbar?
+  pdfmenubar=true,        % show Acrobat’s menu?
+  pdffitwindow=false,     % window fit to page when opened
+  pdfstartview={FitH},    % fits the width of the page to the window
+  pdfauthor={Brett Terespolsky},     % author
+  pdfnewwindow=true,      % links in new window
+  colorlinks=true,        % false: boxed links; true: colored links
+  linkcolor=black,         % color of internal links
+  citecolor=black,        % color of links to bibliography
+  filecolor=black,      % color of file links
+  urlcolor=black           % color of external links
 }
 \makeatletter
 \def\input@path{{./primitives/}}
 \makeatother
 \usepackage{tikz}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usetikzlibrary{shapes.geometric, intersections,arrows}
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=TikzFigures/] 
 
@@ -96,6 +98,11 @@ Prepared by Author\\
 
 \newpage\setcounter{page}{1}
 \pagenumbering{arabic}
+%----------------------------------------------------------------------------------------
+%  Introduction
+%----------------------------------------------------------------------------------------
+
 \section{Introduction}
-% \input{fig1.tikz}
+\label{sec:introduction}
+
 \end{document}
